@@ -23,6 +23,25 @@ namespace TheQuest
         public void UpdateCharacters()
         {
             player.Location = game.PlayerLocation;
+            playerHitPoints.Text = game.PlayerHitPoints.ToString();
+            bool showBat = false;
+            bool showGhost = false;
+            bool showGhoul = false;
+            int enemiesShown = 0;
+
+            foreach (Enemy enemy in game.Enemies)
+            {
+                if (enemy is Bat)
+                {
+                    bat.Location = enemy.Location;
+                    batHitPoints.Text = enemy.HitPoints.ToString();
+                    if (enemy.HitPoints > 0)
+                    {
+                        showBat = true;
+                        enemiesShown++;
+                    }
+                }
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)
