@@ -77,7 +77,7 @@ namespace TheQuest
             switch (level)
             {
                 case 1:
-                    Enemies = new List<Enemy>() { new Bat(this, GetRandomLocation(random))};
+                    Enemies = new List<Enemy>() { new Bat(this, GetRandomLocation(random)) };
                     WeaponInRoom = new Sword(this, GetRandomLocation(random));
                     break;
                 case 2:
@@ -134,6 +134,8 @@ namespace TheQuest
                     break;
                 case 8:
                     System.Windows.Forms.Application.Exit();
+                    break;
+                default:
                     break;
             }
         }
