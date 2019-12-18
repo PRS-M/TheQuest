@@ -1,6 +1,6 @@
 ﻿namespace TheQuest
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         /// Required designer variable.
@@ -38,29 +38,29 @@
             this.bow = new System.Windows.Forms.PictureBox();
             this.mace = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.playerLabel = new System.Windows.Forms.Label();
+            this.ghoulHitPoints = new System.Windows.Forms.Label();
+            this.ghoulLabel = new System.Windows.Forms.Label();
+            this.ghostHitPoints = new System.Windows.Forms.Label();
+            this.ghostLabel = new System.Windows.Forms.Label();
+            this.batHitPoints = new System.Windows.Forms.Label();
             this.playerHitPoints = new System.Windows.Forms.Label();
             this.batLabel = new System.Windows.Forms.Label();
-            this.batHitPoints = new System.Windows.Forms.Label();
-            this.ghostLabel = new System.Windows.Forms.Label();
-            this.ghostHitPoints = new System.Windows.Forms.Label();
-            this.ghoulLabel = new System.Windows.Forms.Label();
-            this.ghoulHitPoints = new System.Windows.Forms.Label();
+            this.playerLabel = new System.Windows.Forms.Label();
             this.inventorySword = new System.Windows.Forms.PictureBox();
             this.inventoryBluePotion = new System.Windows.Forms.PictureBox();
             this.inventoryBow = new System.Windows.Forms.PictureBox();
             this.inventoryRedPotion = new System.Windows.Forms.PictureBox();
             this.inventoryMace = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.moveUpButton = new System.Windows.Forms.Button();
+            this.moveLeftButton = new System.Windows.Forms.Button();
+            this.moveDownButton = new System.Windows.Forms.Button();
+            this.moveRightButton = new System.Windows.Forms.Button();
             this.moveGroupBox = new System.Windows.Forms.GroupBox();
             this.attackGroupBox = new System.Windows.Forms.GroupBox();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
+            this.attackLeftButton = new System.Windows.Forms.Button();
+            this.attackDownButton = new System.Windows.Forms.Button();
+            this.attackRightButton = new System.Windows.Forms.Button();
+            this.attackUpButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.player)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ghost)).BeginInit();
@@ -203,15 +203,55 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(147, 62);
             this.tableLayoutPanel1.TabIndex = 9;
             // 
-            // playerLabel
+            // ghoulHitPoints
             // 
-            this.playerLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.playerLabel.AutoSize = true;
-            this.playerLabel.Location = new System.Drawing.Point(3, 1);
-            this.playerLabel.Name = "playerLabel";
-            this.playerLabel.Size = new System.Drawing.Size(36, 13);
-            this.playerLabel.TabIndex = 10;
-            this.playerLabel.Text = "Player";
+            this.ghoulHitPoints.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.ghoulHitPoints.AutoSize = true;
+            this.ghoulHitPoints.Location = new System.Drawing.Point(54, 47);
+            this.ghoulHitPoints.Name = "ghoulHitPoints";
+            this.ghoulHitPoints.Size = new System.Drawing.Size(75, 13);
+            this.ghoulHitPoints.TabIndex = 17;
+            this.ghoulHitPoints.Text = "ghoulHitPoints";
+            // 
+            // ghoulLabel
+            // 
+            this.ghoulLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.ghoulLabel.AutoSize = true;
+            this.ghoulLabel.Location = new System.Drawing.Point(3, 47);
+            this.ghoulLabel.Name = "ghoulLabel";
+            this.ghoulLabel.Size = new System.Drawing.Size(35, 13);
+            this.ghoulLabel.TabIndex = 16;
+            this.ghoulLabel.Text = "Ghoul";
+            // 
+            // ghostHitPoints
+            // 
+            this.ghostHitPoints.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.ghostHitPoints.AutoSize = true;
+            this.ghostHitPoints.Location = new System.Drawing.Point(54, 31);
+            this.ghostHitPoints.Name = "ghostHitPoints";
+            this.ghostHitPoints.Size = new System.Drawing.Size(75, 13);
+            this.ghostHitPoints.TabIndex = 15;
+            this.ghostHitPoints.Text = "ghostHitPoints";
+            // 
+            // ghostLabel
+            // 
+            this.ghostLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.ghostLabel.AutoSize = true;
+            this.ghostLabel.Location = new System.Drawing.Point(3, 31);
+            this.ghostLabel.Name = "ghostLabel";
+            this.ghostLabel.Size = new System.Drawing.Size(35, 13);
+            this.ghostLabel.TabIndex = 14;
+            this.ghostLabel.Text = "Ghost";
+            // 
+            // batHitPoints
+            // 
+            this.batHitPoints.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.batHitPoints.AutoSize = true;
+            this.batHitPoints.Location = new System.Drawing.Point(54, 16);
+            this.batHitPoints.Name = "batHitPoints";
+            this.batHitPoints.Size = new System.Drawing.Size(64, 13);
+            this.batHitPoints.TabIndex = 13;
+            this.batHitPoints.Text = "batHitPoints";
             // 
             // playerHitPoints
             // 
@@ -233,55 +273,15 @@
             this.batLabel.TabIndex = 12;
             this.batLabel.Text = "Bat";
             // 
-            // batHitPoints
+            // playerLabel
             // 
-            this.batHitPoints.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.batHitPoints.AutoSize = true;
-            this.batHitPoints.Location = new System.Drawing.Point(54, 16);
-            this.batHitPoints.Name = "batHitPoints";
-            this.batHitPoints.Size = new System.Drawing.Size(64, 13);
-            this.batHitPoints.TabIndex = 13;
-            this.batHitPoints.Text = "batHitPoints";
-            // 
-            // ghostLabel
-            // 
-            this.ghostLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.ghostLabel.AutoSize = true;
-            this.ghostLabel.Location = new System.Drawing.Point(3, 31);
-            this.ghostLabel.Name = "ghostLabel";
-            this.ghostLabel.Size = new System.Drawing.Size(35, 13);
-            this.ghostLabel.TabIndex = 14;
-            this.ghostLabel.Text = "Ghost";
-            // 
-            // ghostHitPoints
-            // 
-            this.ghostHitPoints.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.ghostHitPoints.AutoSize = true;
-            this.ghostHitPoints.Location = new System.Drawing.Point(54, 31);
-            this.ghostHitPoints.Name = "ghostHitPoints";
-            this.ghostHitPoints.Size = new System.Drawing.Size(75, 13);
-            this.ghostHitPoints.TabIndex = 15;
-            this.ghostHitPoints.Text = "ghostHitPoints";
-            // 
-            // ghoulLabel
-            // 
-            this.ghoulLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.ghoulLabel.AutoSize = true;
-            this.ghoulLabel.Location = new System.Drawing.Point(3, 47);
-            this.ghoulLabel.Name = "ghoulLabel";
-            this.ghoulLabel.Size = new System.Drawing.Size(35, 13);
-            this.ghoulLabel.TabIndex = 16;
-            this.ghoulLabel.Text = "Ghoul";
-            // 
-            // ghoulHitPoints
-            // 
-            this.ghoulHitPoints.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.ghoulHitPoints.AutoSize = true;
-            this.ghoulHitPoints.Location = new System.Drawing.Point(54, 47);
-            this.ghoulHitPoints.Name = "ghoulHitPoints";
-            this.ghoulHitPoints.Size = new System.Drawing.Size(75, 13);
-            this.ghoulHitPoints.TabIndex = 17;
-            this.ghoulHitPoints.Text = "ghoulHitPoints";
+            this.playerLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.playerLabel.AutoSize = true;
+            this.playerLabel.Location = new System.Drawing.Point(3, 1);
+            this.playerLabel.Name = "playerLabel";
+            this.playerLabel.Size = new System.Drawing.Size(36, 13);
+            this.playerLabel.TabIndex = 10;
+            this.playerLabel.Text = "Player";
             // 
             // inventorySword
             // 
@@ -293,6 +293,7 @@
             this.inventorySword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.inventorySword.TabIndex = 10;
             this.inventorySword.TabStop = false;
+            this.inventorySword.Click += new System.EventHandler(this.inventorySword_Click);
             // 
             // inventoryBluePotion
             // 
@@ -304,6 +305,7 @@
             this.inventoryBluePotion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.inventoryBluePotion.TabIndex = 11;
             this.inventoryBluePotion.TabStop = false;
+            this.inventoryBluePotion.Click += new System.EventHandler(this.inventoryBluePotion_Click);
             // 
             // inventoryBow
             // 
@@ -315,6 +317,7 @@
             this.inventoryBow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.inventoryBow.TabIndex = 12;
             this.inventoryBow.TabStop = false;
+            this.inventoryBow.Click += new System.EventHandler(this.inventoryBow_Click);
             // 
             // inventoryRedPotion
             // 
@@ -326,6 +329,7 @@
             this.inventoryRedPotion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.inventoryRedPotion.TabIndex = 13;
             this.inventoryRedPotion.TabStop = false;
+            this.inventoryRedPotion.Click += new System.EventHandler(this.inventoryRedPotion_Click);
             // 
             // inventoryMace
             // 
@@ -337,54 +341,59 @@
             this.inventoryMace.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.inventoryMace.TabIndex = 14;
             this.inventoryMace.TabStop = false;
+            this.inventoryMace.Click += new System.EventHandler(this.inventoryMace_Click);
             // 
-            // button1
+            // moveUpButton
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button1.Location = new System.Drawing.Point(47, 19);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(35, 35);
-            this.button1.TabIndex = 15;
-            this.button1.Text = "↑";
-            this.button1.UseVisualStyleBackColor = true;
+            this.moveUpButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.moveUpButton.Location = new System.Drawing.Point(47, 19);
+            this.moveUpButton.Name = "moveUpButton";
+            this.moveUpButton.Size = new System.Drawing.Size(35, 35);
+            this.moveUpButton.TabIndex = 15;
+            this.moveUpButton.Text = "↑";
+            this.moveUpButton.UseVisualStyleBackColor = true;
+            this.moveUpButton.Click += new System.EventHandler(this.moveUpButton_Click);
             // 
-            // button2
+            // moveLeftButton
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button2.Location = new System.Drawing.Point(6, 34);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(35, 35);
-            this.button2.TabIndex = 16;
-            this.button2.Text = "←";
-            this.button2.UseVisualStyleBackColor = true;
+            this.moveLeftButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.moveLeftButton.Location = new System.Drawing.Point(6, 34);
+            this.moveLeftButton.Name = "moveLeftButton";
+            this.moveLeftButton.Size = new System.Drawing.Size(35, 35);
+            this.moveLeftButton.TabIndex = 16;
+            this.moveLeftButton.Text = "←";
+            this.moveLeftButton.UseVisualStyleBackColor = true;
+            this.moveLeftButton.Click += new System.EventHandler(this.moveLeftButton_Click);
             // 
-            // button3
+            // moveDownButton
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button3.Location = new System.Drawing.Point(47, 60);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(35, 35);
-            this.button3.TabIndex = 17;
-            this.button3.Text = "↓";
-            this.button3.UseVisualStyleBackColor = true;
+            this.moveDownButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.moveDownButton.Location = new System.Drawing.Point(47, 60);
+            this.moveDownButton.Name = "moveDownButton";
+            this.moveDownButton.Size = new System.Drawing.Size(35, 35);
+            this.moveDownButton.TabIndex = 17;
+            this.moveDownButton.Text = "↓";
+            this.moveDownButton.UseVisualStyleBackColor = true;
+            this.moveDownButton.Click += new System.EventHandler(this.moveDownButton_Click);
             // 
-            // button4
+            // moveRightButton
             // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button4.Location = new System.Drawing.Point(90, 34);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(35, 35);
-            this.button4.TabIndex = 18;
-            this.button4.Text = "→";
-            this.button4.UseVisualStyleBackColor = true;
+            this.moveRightButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.moveRightButton.Location = new System.Drawing.Point(90, 34);
+            this.moveRightButton.Name = "moveRightButton";
+            this.moveRightButton.Size = new System.Drawing.Size(35, 35);
+            this.moveRightButton.TabIndex = 18;
+            this.moveRightButton.Text = "→";
+            this.moveRightButton.UseVisualStyleBackColor = true;
+            this.moveRightButton.Click += new System.EventHandler(this.moveRightButton_Click);
             // 
             // moveGroupBox
             // 
             this.moveGroupBox.BackColor = System.Drawing.Color.Transparent;
-            this.moveGroupBox.Controls.Add(this.button2);
-            this.moveGroupBox.Controls.Add(this.button3);
-            this.moveGroupBox.Controls.Add(this.button4);
-            this.moveGroupBox.Controls.Add(this.button1);
+            this.moveGroupBox.Controls.Add(this.moveLeftButton);
+            this.moveGroupBox.Controls.Add(this.moveDownButton);
+            this.moveGroupBox.Controls.Add(this.moveRightButton);
+            this.moveGroupBox.Controls.Add(this.moveUpButton);
             this.moveGroupBox.Location = new System.Drawing.Point(543, 484);
             this.moveGroupBox.Name = "moveGroupBox";
             this.moveGroupBox.Size = new System.Drawing.Size(133, 102);
@@ -395,10 +404,10 @@
             // attackGroupBox
             // 
             this.attackGroupBox.BackColor = System.Drawing.Color.Transparent;
-            this.attackGroupBox.Controls.Add(this.button5);
-            this.attackGroupBox.Controls.Add(this.button6);
-            this.attackGroupBox.Controls.Add(this.button7);
-            this.attackGroupBox.Controls.Add(this.button8);
+            this.attackGroupBox.Controls.Add(this.attackLeftButton);
+            this.attackGroupBox.Controls.Add(this.attackDownButton);
+            this.attackGroupBox.Controls.Add(this.attackRightButton);
+            this.attackGroupBox.Controls.Add(this.attackUpButton);
             this.attackGroupBox.Location = new System.Drawing.Point(694, 484);
             this.attackGroupBox.Name = "attackGroupBox";
             this.attackGroupBox.Size = new System.Drawing.Size(133, 102);
@@ -406,53 +415,58 @@
             this.attackGroupBox.TabStop = false;
             this.attackGroupBox.Text = "ATTACK";
             // 
-            // button5
+            // attackLeftButton
             // 
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button5.Location = new System.Drawing.Point(6, 34);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(35, 35);
-            this.button5.TabIndex = 16;
-            this.button5.Text = "←";
-            this.button5.UseVisualStyleBackColor = true;
+            this.attackLeftButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.attackLeftButton.Location = new System.Drawing.Point(6, 34);
+            this.attackLeftButton.Name = "attackLeftButton";
+            this.attackLeftButton.Size = new System.Drawing.Size(35, 35);
+            this.attackLeftButton.TabIndex = 16;
+            this.attackLeftButton.Text = "←";
+            this.attackLeftButton.UseVisualStyleBackColor = true;
+            this.attackLeftButton.Click += new System.EventHandler(this.attackLeftButton_Click);
             // 
-            // button6
+            // attackDownButton
             // 
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button6.Location = new System.Drawing.Point(47, 60);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(35, 35);
-            this.button6.TabIndex = 17;
-            this.button6.Text = "↓";
-            this.button6.UseVisualStyleBackColor = true;
+            this.attackDownButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.attackDownButton.Location = new System.Drawing.Point(47, 60);
+            this.attackDownButton.Name = "attackDownButton";
+            this.attackDownButton.Size = new System.Drawing.Size(35, 35);
+            this.attackDownButton.TabIndex = 17;
+            this.attackDownButton.Text = "↓";
+            this.attackDownButton.UseVisualStyleBackColor = true;
+            this.attackDownButton.Click += new System.EventHandler(this.attackDownButton_Click);
             // 
-            // button7
+            // attackRightButton
             // 
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button7.Location = new System.Drawing.Point(90, 34);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(35, 35);
-            this.button7.TabIndex = 18;
-            this.button7.Text = "→";
-            this.button7.UseVisualStyleBackColor = true;
+            this.attackRightButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.attackRightButton.Location = new System.Drawing.Point(90, 34);
+            this.attackRightButton.Name = "attackRightButton";
+            this.attackRightButton.Size = new System.Drawing.Size(35, 35);
+            this.attackRightButton.TabIndex = 18;
+            this.attackRightButton.Text = "→";
+            this.attackRightButton.UseVisualStyleBackColor = true;
+            this.attackRightButton.Click += new System.EventHandler(this.attackRightButton_Click);
             // 
-            // button8
+            // attackUpButton
             // 
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button8.Location = new System.Drawing.Point(47, 19);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(35, 35);
-            this.button8.TabIndex = 15;
-            this.button8.Text = "↑";
-            this.button8.UseVisualStyleBackColor = true;
+            this.attackUpButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.attackUpButton.Location = new System.Drawing.Point(47, 19);
+            this.attackUpButton.Name = "attackUpButton";
+            this.attackUpButton.Size = new System.Drawing.Size(35, 35);
+            this.attackUpButton.TabIndex = 15;
+            this.attackUpButton.Text = "↑";
+            this.attackUpButton.UseVisualStyleBackColor = true;
+            this.attackUpButton.Click += new System.EventHandler(this.attackUpButton_Click);
             // 
-            // Form1
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::TheQuest.Properties.Resources.dungeon600x400;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(934, 623);
+            this.Controls.Add(this.player);
             this.Controls.Add(this.attackGroupBox);
             this.Controls.Add(this.moveGroupBox);
             this.Controls.Add(this.inventoryMace);
@@ -461,18 +475,19 @@
             this.Controls.Add(this.inventoryBluePotion);
             this.Controls.Add(this.inventorySword);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Controls.Add(this.mace);
-            this.Controls.Add(this.bow);
-            this.Controls.Add(this.sword);
             this.Controls.Add(this.redPotion);
             this.Controls.Add(this.bluePotion);
             this.Controls.Add(this.ghoul);
             this.Controls.Add(this.ghost);
             this.Controls.Add(this.bat);
-            this.Controls.Add(this.player);
+            this.Controls.Add(this.mace);
+            this.Controls.Add(this.bow);
+            this.Controls.Add(this.sword);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "MainForm";
+            this.Text = "The Quest";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.player)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bat)).EndInit();
@@ -522,16 +537,16 @@
         private System.Windows.Forms.PictureBox inventoryBow;
         private System.Windows.Forms.PictureBox inventoryRedPotion;
         private System.Windows.Forms.PictureBox inventoryMace;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button moveUpButton;
+        private System.Windows.Forms.Button moveLeftButton;
+        private System.Windows.Forms.Button moveDownButton;
+        private System.Windows.Forms.Button moveRightButton;
         private System.Windows.Forms.GroupBox moveGroupBox;
         private System.Windows.Forms.GroupBox attackGroupBox;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button attackLeftButton;
+        private System.Windows.Forms.Button attackDownButton;
+        private System.Windows.Forms.Button attackRightButton;
+        private System.Windows.Forms.Button attackUpButton;
     }
 }
 
