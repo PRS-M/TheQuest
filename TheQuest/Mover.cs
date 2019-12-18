@@ -71,7 +71,8 @@ namespace TheQuest
                         newLocation.X += MoveInterval;
                     }
                     break;
-                default: break;
+                default:
+                    break;
             }
 
             return newLocation;
